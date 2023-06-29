@@ -1,0 +1,48 @@
+{
+	"info": {
+		"_postman_id": "e1d46d53-b28b-46ab-ae69-7bacf99f359c",
+		"name": "User_Endpoints_Rocket.Chat_ES_Felipe_Rosario",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create User",
+			"_postman_id": "60b0e881-4147-464c-a3ba-f5699b79523a",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{authToken}}"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-User-Id",
+						"value": "Hp4BjCSxjBKznCHX3",
+						"type": "text"
+					},
+					{
+						"key": "X-Auth-Token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"TestFelipe3\", \n    \"email\": \"TesteFelipe3@user.numberone\", \n    \"password\": \"RocketChallenge1\", \n    \"username\": \"TestFelipe3\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://68ff-2804-4ce0-1dd-b200-75d0-ada2-6c4c-e912.ngrok-free.app/api/v1/users.create"
+			},
+			"response": []
+		}
+	]
+}
