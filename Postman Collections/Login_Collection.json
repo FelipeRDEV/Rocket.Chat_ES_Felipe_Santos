@@ -1,0 +1,67 @@
+{
+	"info": {
+		"_postman_id": "e0e79ccf-4a26-4ef5-9d15-d79aa33064d2",
+		"name": "Login_Endpoints_Rocket.Chat_ES_Felipe_Rosario",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b73fc457-7c02-4547-bd34-fd511b7a1378",
+						"exec": [
+							"pm.globals.set ('token', pm.response.json().data.authToken)"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "cf3c7ef8-2e62-4534-b31e-1be7e97487f5",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user\": \"felipersantos\", \n    \"password\": \"rocketchatchallenge@2023\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://68ff-2804-4ce0-1dd-b200-75d0-ada2-6c4c-e912.ngrok-free.app/api/v1/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"_postman_id": "74671480-09f6-420b-bf1d-94855982e368",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{token}}",
+						"type": "text"
+					},
+					{
+						"key": "X-User-Id",
+						"value": "Hp4BjCSxjBKznCHX3",
+						"type": "text"
+					}
+				],
+				"url": "https://68ff-2804-4ce0-1dd-b200-75d0-ada2-6c4c-e912.ngrok-free.app/api/v1/users.logout"
+			},
+			"response": []
+		}
+	]
+}
