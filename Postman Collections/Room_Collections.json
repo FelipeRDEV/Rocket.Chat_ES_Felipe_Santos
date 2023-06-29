@@ -1,0 +1,80 @@
+{
+	"info": {
+		"_postman_id": "ac767a14-668d-44f3-8aa0-13045a051976",
+		"name": "Room_Endpoints_Rocket.Chat_ES_Felipe_Rosario",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Rooms",
+			"_postman_id": "5fb8c179-ab03-46fe-bb21-f46557f52421",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-User-Id",
+						"value": "Hp4BjCSxjBKznCHX3",
+						"type": "text"
+					},
+					{
+						"key": "X-Auth-Token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": "https://68ff-2804-4ce0-1dd-b200-75d0-ada2-6c4c-e912.ngrok-free.app/api/v1/rooms.get"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Room information",
+			"_postman_id": "629153f8-43ef-40ac-b36f-a648b7990f1a",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-User-Id",
+						"value": "Hp4BjCSxjBKznCHX3",
+						"type": "text"
+					},
+					{
+						"key": "X-Auth-Token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://68ff-2804-4ce0-1dd-b200-75d0-ada2-6c4c-e912.ngrok-free.app/api/v1/rooms.info?roomId=GENERAL&roomName=general",
+					"protocol": "https",
+					"host": [
+						"68ff-2804-4ce0-1dd-b200-75d0-ada2-6c4c-e912",
+						"ngrok-free",
+						"app"
+					],
+					"path": [
+						"api",
+						"v1",
+						"rooms.info"
+					],
+					"query": [
+						{
+							"key": "roomId",
+							"value": "GENERAL"
+						},
+						{
+							"key": "roomName",
+							"value": "general"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
